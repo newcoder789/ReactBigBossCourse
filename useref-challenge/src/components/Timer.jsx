@@ -8,10 +8,9 @@ const Timer = () => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
         setCount((prevCount)=>prevCount+1);
-        
       }, 1000);
   }
-    return ()=>{
+    return ()=>{  
       clearInterval(intervalRef.current);
     }
   },[isRunning])
